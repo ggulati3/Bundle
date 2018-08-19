@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Welcome(props) {
-  return <h1>Hello, Gaurav</h1>;
-}
+import App from './App.jsx';
 
-ReactDOM.render(<Welcome />, document.getElementById('root'))
+
+
+ReactDOM.render(<App />, document.getElementById('App'))
