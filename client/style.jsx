@@ -15,9 +15,10 @@ export const Nav = styled.div `
 	width: 98vw;
 	height: 10vh;
 	border: solid;
-	border-color: red;
+	border-color: #B72000;
 	z-index:1;
 	flex-direction: row;
+	background-color: #B72000;
 `
 
 export const SignIn = styled.div `
@@ -31,4 +32,17 @@ export const SignIn = styled.div `
 	align-self: auto;
 	justify-content: center;
 
+`
+
+export const Input = styled.input`
+	display:flex;
+	flex-direction: row;
+	border: 1px solid;
+	margin: auto;
+	padding: 10px;
+	width: 100px;
+`
+
+export const EmailInfo = styled.h3 `
+	align: left;
 `
