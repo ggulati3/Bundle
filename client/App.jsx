@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from './Components/navbar.jsx'
-import Login from './Components/login.jsx'
+import Navbar from './Components/Navbar/navbar.jsx'
+import Login from './Components/Login/login.jsx'
 import { MainPage } from './style.jsx'
 
 class App extends React.Component {
