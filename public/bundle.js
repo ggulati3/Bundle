@@ -25549,10 +25549,20 @@ var Login = function (_React$Component) {
 	function Login(props) {
 		_classCallCheck(this, Login);
 
-		return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+
+		_this.state = {
+			username: '',
+			password: ''
+		};
+		_this.clickOnLogIn = _this.clickOnLogIn.bind(_this);
+		return _this;
 	}
 
 	_createClass(Login, [{
+		key: 'clickOnLogIn',
+		value: function clickOnLogIn() {}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -25583,7 +25593,7 @@ var Login = function (_React$Component) {
 						null,
 						_react2.default.createElement(
 							_loginStyle.Button,
-							{ id: 'btnLogin', className: 'btn btn-action' },
+							{ id: 'btnLogin', className: 'btn btn-action', onClick: this.clickOnLogIn },
 							'Log In'
 						)
 					),
