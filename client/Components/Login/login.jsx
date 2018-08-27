@@ -33,7 +33,7 @@ class Login extends React.Component {
   render(){
 
   	  if(this.state.redirect){
-  	  	return  <Redirect to={this.state.username} />
+  	  	return  <Redirect to={'/home'} />
   	  }
 	  return (
 	  	<SignIn>
