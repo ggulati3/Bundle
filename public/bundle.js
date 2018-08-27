@@ -4966,6 +4966,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _homePageStyle = __webpack_require__(83);
 
+var _reactRouterDom = __webpack_require__(28);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4980,12 +4982,27 @@ var HomePage = function (_React$Component) {
 	function HomePage(props) {
 		_classCallCheck(this, HomePage);
 
-		return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call(this, props));
+
+		_this.state = {
+			'packageChosen': false
+		};
+
+		_this.clickOnOption = _this.clickOnOption.bind(_this);
+		return _this;
 	}
 
 	_createClass(HomePage, [{
+		key: 'clickOnOption',
+		value: function clickOnOption() {
+			this.setState({ 'packageChosen': true });
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			if (this.state.packageChosen) {
+				return _react2.default.createElement(_reactRouterDom.Redirect, { to: '/netflix' });
+			}
 			return _react2.default.createElement(
 				'div',
 				{ id: 'homePage' },
@@ -4995,14 +5012,14 @@ var HomePage = function (_React$Component) {
 					' Welcome Gaurav, '
 				),
 				_react2.default.createElement(
-					'h3',
+					_homePageStyle.NoPackageAlert,
 					null,
 					' You are not added to any packages. Pick one below and bundle up!'
 				),
 				_react2.default.createElement(
 					_homePageStyle.PackageList,
 					null,
-					_react2.default.createElement(_homePageStyle.Package, { src: 'https://s3-us-west-1.amazonaws.com/hrsf98bundle/netflixlogo.0.0.png' }),
+					_react2.default.createElement(_homePageStyle.Package, { src: 'https://s3-us-west-1.amazonaws.com/hrsf98bundle/netflixlogo.0.0.png', onClick: this.clickOnOption }),
 					_react2.default.createElement(_homePageStyle.Package, { src: 'https://s3-us-west-1.amazonaws.com/hrsf98bundle/chegLogo.png' }),
 					_react2.default.createElement(_homePageStyle.Package, { src: 'https://s3-us-west-1.amazonaws.com/hrsf98bundle/amazon-prime2.ong.png' })
 				)
@@ -29210,11 +29227,12 @@ var SignUp = exports.SignUp = _styledComponents2.default.div(_templateObject3);
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.Package = exports.PackageList = exports.Greeting = undefined;
+exports.Package = exports.PackageList = exports.NoPackageAlert = exports.Greeting = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\tfont-family: Bevan;\n\tborder:none;\n\tfont-size: 50px;\n\twidth: 600px;\n\tmargin-bottom: 120px;\n\n'], ['\n\tfont-family: Bevan;\n\tborder:none;\n\tfont-size: 50px;\n\twidth: 600px;\n\tmargin-bottom: 120px;\n\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n'], ['\n\tdisplay: flex;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n\theight: 300px;\n\twidth: 300px;\n\tborder: solid;\n\ttext-align: center;\n\tmargin: 30px;\n'], ['\n\theight: 300px;\n\twidth: 300px;\n\tborder: solid;\n\ttext-align: center;\n\tmargin: 30px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n\tfont-family: Bevan;\n\tborder:none;\n\tfont-size: 50px;\n\twidth: 600px;\n\tmargin-top: -100px;\n\tmargin-right: -30px;\n\n'], ['\n\tfont-family: Bevan;\n\tborder:none;\n\tfont-size: 50px;\n\twidth: 600px;\n\tmargin-top: -100px;\n\tmargin-right: -30px;\n\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n\tborder: solid;\n\tborder-radius: 10%;\n\tfont-size: 20px;\n\tfont-family: Bevan;\n\tbackground-color: lightblue;\n\n'], ['\n\tborder: solid;\n\tborder-radius: 10%;\n\tfont-size: 20px;\n\tfont-family: Bevan;\n\tbackground-color: lightblue;\n\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n'], ['\n\tdisplay: flex;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n\theight: 300px;\n\twidth: 300px;\n\tborder: solid;\n\ttext-align: center;\n\tmargin: 30px;\n'], ['\n\theight: 300px;\n\twidth: 300px;\n\tborder: solid;\n\ttext-align: center;\n\tmargin: 30px;\n']);
 
 var _styledComponents = __webpack_require__(5);
 
@@ -29226,9 +29244,11 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var Greeting = exports.Greeting = _styledComponents2.default.div(_templateObject);
 
-var PackageList = exports.PackageList = _styledComponents2.default.div(_templateObject2);
+var NoPackageAlert = exports.NoPackageAlert = _styledComponents2.default.div(_templateObject2);
 
-var Package = exports.Package = _styledComponents2.default.img(_templateObject3);
+var PackageList = exports.PackageList = _styledComponents2.default.div(_templateObject3);
+
+var Package = exports.Package = _styledComponents2.default.img(_templateObject4);
 
 /***/ })
 /******/ ]);

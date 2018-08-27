@@ -5,7 +5,17 @@ export const Greeting = styled.div `
 	border:none;
 	font-size: 50px;
 	width: 600px;
-	margin-bottom: 120px;
+	margin-top: -100px;
+	margin-right: -30px;
+
+`
+
+export const NoPackageAlert = styled.div `
+	border: solid;
+	border-radius: 10%;
+	font-size: 20px;
+	font-family: Bevan;
+	background-color: lightblue;
 
 `
 
