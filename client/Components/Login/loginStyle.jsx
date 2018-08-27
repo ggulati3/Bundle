@@ -7,11 +7,13 @@ export const ButtonContainer = styled.div `
 `
 
 export const Button = styled.div `
-	width: 60%;
+	width: 15vw;
+	height: 5vh;
 	margin: auto;
 	padding: 15px;
-	background-color: #B72000;
+	background-color:#336699;
 	border: solid;
+	border-radius: 10px;
 `
 
 export const LogIn = styled.div `
@@ -21,3 +23,4 @@ export const LogIn = styled.div `
 export const SignUp = styled.div `
 	padding: 10px;
 `
+
