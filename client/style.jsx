@@ -1,24 +1,23 @@
 import styled from 'styled-components';
 
 export const MainPage = styled.div `
-	border: solid;
+	border: none;
 	margin: 0;
     padding: 0;
     height:98vh;
     width: 98vw;
     text-align: center;
 	display:flex;
-	flex-wrap: wrap
+	flex-wrap: wrap;
 `;
 
 export const Nav = styled.div `
 	width: 98vw;
 	height: 10vh;
 	border: solid;
-	border-color: #B72000;
 	z-index:1;
-	flex-direction: row;
-	background-color: #B72000;
+	border-color: #336699;
+	background-color:#336699 ;
 `
 
 export const SignIn = styled.div `
@@ -28,9 +27,9 @@ export const SignIn = styled.div `
 	height: 60vh;
 	width: 25vw;
 	margin: auto;
+	margin-right: 90px;
 	margin-bottom: 10%
-	align-self: auto;
-	justify-content: center;
+	font-family: Bevan;
 
 `
 
@@ -40,9 +39,11 @@ export const Input = styled.input`
 	border: 1px solid;
 	margin: auto;
 	padding: 10px;
-	width: 100px;
+	width: 20vw;
+	font-family: Bevan;
 `
 
 export const EmailInfo = styled.h3 `
 	align: left;
+	font-family: Bevan;
 `
