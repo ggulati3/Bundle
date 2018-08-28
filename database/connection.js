@@ -14,8 +14,4 @@ const findNetflixBundle = () => {
 	return promise;
 }
 
-findNetflixBundle().then(function(data){
-	console.log(data);
-}).catch(function(error){
-	console.log(error)
-})
+module.exports = findNetflixBundle;

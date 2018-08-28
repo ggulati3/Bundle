@@ -9,6 +9,7 @@ export const Title = styled.div `
 	margin: auto;
 	margin-right: 1150px;
 	font-size: 60px;
+	z-index: 0;
 
 
 `

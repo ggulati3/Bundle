@@ -21,6 +21,7 @@ export const NoPackageAlert = styled.div `
 
 export const PackageList = styled.div `
 	display: flex;
+
 `
 
 export const Package = styled.img `
@@ -29,4 +30,17 @@ export const Package = styled.img `
 	border: solid;
 	text-align: center;
 	margin: 30px;
+`
+
+export const SignOut = styled.div `
+	border:solid;
+	width: 100px;
+	height: 50px;
+	margin: auto;
+	border-radius: 15%;
+	font-family: Bevan;
+	background-color: lightblue;
+	z-index: 2;
+	margin-left: 115%;
+
 `

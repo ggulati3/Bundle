@@ -14,14 +14,17 @@ class Login extends React.Component {
   	this.state = {
   		username: '',
   		password: '',
-  		redirect: false
+  		logIn: false,
+      signUp: false
+
   	}
   	this.clickOnLogIn = this.clickOnLogIn.bind(this);
   	this.getUserEmail = this.getUserEmail.bind(this);
+    this.clickOnSignUp = this.clickOnSignUp.bind(this);
   }
 
   clickOnLogIn(){
-  	this.setState({redirect: true})
+  	this.setState({logIn: true})
   }
 
   getUserEmail(e){
@@ -30,11 +33,19 @@ class Login extends React.Component {
   	})
   }
 
+  clickOnSignUp(){
+    this.setState({signUp: true})
+  }
+
   render(){
 
-  	  if(this.state.redirect){
-  	  	return  <Redirect to={'/home'} />
-  	  }
+	  if(this.state.logIn){
+	  	return  <Redirect to={'/home'} />
+	  }
+    if(this.state.signUp){
+      return  <Redirect to={'/signUp'} />
+    }
+
 	  return (
 	  	<SignIn>
 	  		<h1> Bundle Sign In </h1>
@@ -48,7 +59,7 @@ class Login extends React.Component {
 		  		</LogIn>
 
 		  		<SignUp>
-		  			<Button id='btnSignUp' className='btn btn-secondary'>Sign Up</Button>
+		  			<Button id='btnSignUp' className='btn btn-secondary' onClick={this.clickOnSignUp}>Sign Up</Button>
 		  		</SignUp>
 		  	</ButtonContainer>
 	  	</SignIn>
